@@ -1,0 +1,107 @@
+    :root{
+      --bg:#111315;            /* page bg */
+      --shell:#17191c;         /* outer shell */
+      --panel:#faf9f6;         /* main panel (warm ivory) */
+      --panel-2:#f2efe9;       /* slightly darker */
+      --panel-3:#ebe6de;       /* light sand */
+      --card:#ffffff;          /* cards */
+      --ink:#1f262a;           /* text */
+      --muted:#6b7280;
+      --brand:#22c55e;         /* emerald */
+      --brand-2:#16a34a;       /* deeper emerald */
+      --ok:#16a34a;
+      --warn:#f59e0b;
+      --bad:#ef4444; /* can tweak if you don't want red later */
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow: 0 10px 30px rgba(0,0,0,.14);
+      --ring: 0 0 0 3px rgba(34,197,94,.18);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; 
+      background:var(--bg); color:var(--ink); display:flex; align-items:center; justify-content:center;
+      padding:24px;
+    }
+    .shell{width:min(1240px,100%); background:var(--shell); border-radius:20px; padding:14px; box-shadow:var(--shadow)}
+    .app{background:var(--panel); border-radius:16px; display:grid; grid-template-columns: 240px 1fr; min-height:760px}
+
+    /* Sidebar */
+    .sidebar{background:var(--panel-3); border-top-left-radius:16px; border-bottom-left-radius:16px; padding:22px 16px; display:flex; flex-direction:column; gap:18px}
+    .logo{font-weight:800; letter-spacing:.06em; color:#574b3f}
+    .nav{display:flex; flex-direction:column; gap:10px; margin-top:6px}
+    .nav .btn{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:12px; background:var(--panel-2); border:1px solid #e4dcd1; cursor:pointer; transition:.2s}
+    .nav .btn:hover{transform:translateY(-1px)}
+    .nav .btn svg{width:18px; height:18px}
+    .spacer{flex:1}
+
+    /* Main */
+    .main{padding:18px 20px 20px 20px}
+    .topbar{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+    .search{flex:1; min-width:240px; display:flex; align-items:center; gap:8px; background:var(--panel-2); padding:10px 12px; border-radius:12px; border:1px solid #e4dcd1}
+    .search input{all:unset; flex:1; font-size:14px; color:var(--ink)}
+
+    .chip{display:flex; align-items:center; gap:8px; background:var(--panel-2); padding:8px 10px; border-radius:12px; border:1px solid #e4dcd1; font-size:13px}
+    .chip input, .chip select{border:none; background:transparent; outline:none; font-size:13px; color:var(--ink)}
+    .chip input[type="date"]{padding:4px 2px}
+
+    .avatar{margin-left:auto; display:flex; align-items:center; gap:10px}
+    .avatar img{width:34px; height:34px; border-radius:50%; border:2px solid #fff}
+    .avatar .name{font-weight:600; font-size:14px}
+
+    /* Lead quick add */
+    .leadbar{margin-top:10px; background:var(--card); border:1px solid #eadfce; border-radius:14px; padding:10px; box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .leadbar h4{margin:0 0 8px 4px; font-size:14px; letter-spacing:.04em; text-transform:uppercase; color:#6b5d4f}
+    .lead-form{display:grid; grid-template-columns: repeat(5, 1fr); gap:10px}
+    .input{background:var(--panel-2); border:1px solid #e4dcd1; border-radius:10px; padding:10px 12px; font-size:14px; outline:none}
+    .input:focus{box-shadow:var(--ring); border-color:rgba(34,197,94,.5)}
+    .add-btn{background:linear-gradient(180deg,var(--brand),#12b25a); color:#0e1b11; border:none; padding:10px 14px; border-radius:10px; box-shadow:0 8px 22px rgba(34,197,94,.35); cursor:pointer; font-weight:700}
+
+Azamjon Alghorithm, [25.08.2025 0:12]
+
+
+    /* Card */
+    .card{margin-top:16px; background:var(--card); border-radius:16px; padding:14px; border:1px solid #eadfce}
+    .card h3{margin:0 0 10px 6px; font-size:18px; letter-spacing:.02em}
+
+    /* Tabs */
+    .tabs{display:flex; gap:8px; margin:0 0 12px 6px; flex-wrap:wrap}
+    .tab{padding:8px 12px; border-radius:10px; font-weight:600; font-size:13px; color:#3b2e23; background:var(--panel-3); border:1px solid #e4dcd1; cursor:pointer}
+    .tab.active{background:#fff; color:#16210e; border-color:#e7dccb; box-shadow:0 4px 14px rgba(0,0,0,.06)}
+
+    /* Table */
+    .table{width:100%; border-collapse:separate; border-spacing:0 8px}
+    .th{font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:#8a7c6c; padding:8px 10px}
+    .row{background:#fff; border:1px solid #eadfce; border-radius:12px; box-shadow: 0 4px 10px rgba(0,0,0,.04)}
+    .cell{padding:12px 10px; font-size:14px; color:#2b2b2b}
+    .row .cell:first-child{border-top-left-radius:12px; border-bottom-left-radius:12px}
+    .row .cell:last-child{border-top-right-radius:12px; border-bottom-right-radius:12px}
+
+    .pill{padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; display:inline-flex; align-items:center; gap:6px}
+    .pill.ok{background:rgba(22,163,74,.12); color:var(--ok)}
+    .pill.bad{background:rgba(239,68,68,.1); color:var(--bad)}
+    .pill.warn{background:rgba(245,158,11,.12); color:var(--warn)}
+    .type{color:var(--brand-2); font-weight:700}
+
+    .id-badge{display:inline-flex; gap:8px; align-items:center}
+    .dot{width:8px; height:8px; background:var(--brand-2); border-radius:50%}
+
+    .foot{display:flex; gap:10px; justify-content:flex-end; margin-top:10px}
+    .ghost{background:transparent; border:1px dashed #d9cdbb; color:#7a6757; padding:10px 12px; border-radius:10px; cursor:pointer}
+    .primary{background:linear-gradient(180deg,var(--brand),#12b25a); color:#0e1b11; border:none; padding:10px 14px; border-radius:10px; box-shadow:0 8px 22px rgba(34,197,94,.35); cursor:pointer; font-weight:800}
+
+    /* Responsive */
+    @media (max-width: 1000px){
+      .app{grid-template-columns: 1fr}
+      .sidebar{display:none}
+    }
+    @media (max-width: 760px){
+      .lead-form{grid-template-columns:1fr 1fr;}
+    }
+    @media (max-width: 640px){
+      .topbar{flex-wrap:wrap}
+      .avatar{order:5; width:100%; justify-content:flex-end}
+      .tabs{flex-wrap:wrap}
+      .th.hide-sm, .cell.hide-sm{display:none}
+    }

@@ -89,3 +89,21 @@ background: linear-gradient(254deg,rgba(242, 7, 234, 1) 53%, rgba(104, 83, 237, 
     margin: 0 auto;
     padding: 0px 20px;
 }
+
+.login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sign-title{
+    margin-bottom: 180px;
+}
+
+.log-in-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    padding: 100px 100px;
+}
